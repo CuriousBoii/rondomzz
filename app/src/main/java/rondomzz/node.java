@@ -7,5 +7,8 @@ public class node <T>{
         this.data = data;
         //System.out.println(data);
     }
+    /*public void nodemkr(node<T> mynode, T data){
+        node<T> mynode = new node<T>(data);
+    }*/
     
 }

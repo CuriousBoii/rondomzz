@@ -31,5 +31,22 @@ public class LinkedList<T> {
         }
     }
 
+    public void insertAfter(node<T> newNode, node<T> atNode){
+        if(this.head != null){    
+            newNode.next = atNode.next;
+            if(atNode.next != null){
+                atNode.next.previous = newNode;
+            }
+            atNode.next = newNode;
+            newNode.previous = atNode;
+        }
+        else{
+            System.out.println("the list is empty or atNode doesn't exist, so i've added the node. ");
+            add(newNode);
+        }
+    }
 
+    public void remove(node<T> removeNode){
+        
+    }
 }
