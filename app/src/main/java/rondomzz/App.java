@@ -10,14 +10,23 @@ public class App {
         LinkedList<String> ll = new LinkedList<>();
         ll.add(obj1);
         //ll.add(obj2);
+        /*an error if you add obj2, rectify it. */
         ll.print();
         ll.insertAfter(obj3, obj1);
         ll.insertAfter(obj2, obj1);
         ll.print();
 
+
+        linkedListNodes <Integer> nn = new linkedListNodes<>();
+        nn.add(1);
+        nn.add(2);
+
+        System.out.println(nn.add(2));
     }
 
     public Object getGreeting() {
         return null;
     }
+
+
 }
