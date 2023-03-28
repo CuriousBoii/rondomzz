@@ -20,8 +20,10 @@ public class App {
         linkedListNodes <Integer> nn = new linkedListNodes<>();
         nn.add(1);
         nn.add(2);
+        nn.add(3);
+        nn.remove(4);
 
-        System.out.println(nn.add(2));
+        System.out.println(nn.next.value);
     }
 
     public Object getGreeting() {

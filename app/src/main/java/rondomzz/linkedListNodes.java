@@ -2,8 +2,8 @@ package rondomzz;
 
 public class linkedListNodes <T>{
     T value;
-    private linkedListNodes<T> next;
-    private int size;
+    public linkedListNodes<T> next;
+    public int size;
 
     public linkedListNodes() {
         this.value = null;
@@ -29,4 +29,24 @@ public class linkedListNodes <T>{
         this.size++;
         return value;
     }
+
+    public T remove(T value){
+        if(this.size == 0){
+            System.out.println("empty list");
+        }
+        else{
+            linkedListNodes <T> current = this;
+            while(current.next.value != value){
+                current = current.next;
+                if (current.next == null){
+                    System.out.println("no such value in the list");
+                    return value;
+                }
+            }
+            current.next = current.next.next;
+        }
+        this.size--;
+        return value;
+    }
+
 }
